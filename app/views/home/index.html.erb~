@@ -1,0 +1,13 @@
+<% if notice %>
+<p id="notice"><%= notice %>
+<% end %>
+
+<h1> Halaman Index </h1>
+
+<% @pages.each do |page| %>
+	<div class="entry">
+		<%= image_tag(pages.image_url) %>
+		<h3><%= page.title %></h3>
+			<%= sanitize(page.news) %>
+	</div>
+<% end %>
